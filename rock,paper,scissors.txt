@@ -1,0 +1,36 @@
+from random import randint
+
+point=0
+result=["rock","paper","scissors"]
+
+while True:
+    you= input("rock,paper,scissors ?")
+    computer= result[randint(0,2)]
+    while you==computer:
+        computer=result[randint(0,2)]
+
+    print("You: ", you,"Computer:",computer)
+    
+    if you=="rock":
+        if computer=="paper":
+           print("Point: ",point)
+           break
+        elif computer=="scissors":
+           point=point+1
+           continue
+    
+    elif you=="paper":
+        if computer=="scissors":
+           print("Point: ",point)
+           break
+        elif computer=="rock":
+           point=point+1
+           continue
+
+    else:
+        if computer=="rock":
+           print("Point: ",point)
+           break
+        elif computer=="paper":
+           point=point+1
+           continue
